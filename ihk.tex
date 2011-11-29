@@ -1,20 +1,51 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper,appendixprefix,liststotoc]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\author{Your Name}
-\date{\today}
+\usepackage[ngerman]{babel}
+
+%\title{Projekt Name}
+%\author{Your Name}
+%\date{\today}
 
 \begin{document}
+%\maketitle
+%titlepage Change Name, data and so on
+\begin{titlepage}
+ \begin{center}
+	\huge
+	\textbf{Projekt Name}
+	\bigskip\\
+	\large
+	Vorname Nachname \\
+	Fachinformatik\\
+	Fachrichtung: Anwendungsentwicklung
+	\bigskip\\
+   \textbf{Firmenname}
+	\bigskip\\
+	\today
+\end{center}
+\end{titlepage}
+\newpage
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\chapter{Ausgangssituation}
+\section{Projektziele, Teilaufg.,Kundenw\"unsche }
+\section{Projektumfeld, Prozessschittstellen}
+\chapter{Ressourcen- und Ablauf-planung}
+\section{Personal-, Sach-, mittel-, Termin- und Kostenplanung}
+\section{Ablaufplan}
+\chapter{Durchführung und Auftrags-bearbeitung}
+\section{Prozessschritte, Vorgehensweise, Qualit\"atssicherung}
+\section{Abweichungen, Anpasssungen, Entscheidungen}
+\chapter{Projektergebnisse}
+\section{Soll-Ist-Vergl., Abw.U. Anpassungen, Qualit\"atssicherung}
 
-\section{Ausgangssituation}
-\subsection{Projektziele, Teilaufg.,Kundenw\"unsche }
-\subsection{Projektumfeld, Prozessschittstellen}
-\section{Ressourcen- und Ablauf-planung}
-\subsection{Personal-, Sach-, mittel-, Termin- und Kostenplanung}
-\subsection{Ablaufplan}
-\section{Durchführung und Auftrags-bearbeitung}
-\subsection{Prozessschritte, Vorgehensweise, Qualit\"atssicherung}
-\subsection{Abweichungen, Anpasssungen, Entscheidungen}
-\section{Projektergebnisse}
-\subsection{Soll-Ist-Vergl., Abw.U. Anpassungen, Qualit\"atssicherung}
+\newpage
+\pagenumbering{Roman}
+\appendix
+	\listoftables
+	\listoffiguresss
+%\end{appendix}
 \end{document}

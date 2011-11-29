@@ -2,3 +2,5 @@
 *.toc
 *.aux
 *.log
+*.lof
+*.lot
