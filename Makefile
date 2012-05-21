@@ -1,7 +1,7 @@
 all:
 	pdflatex ihk.tex
 
-glossarie:
+glossar:
 	makeglossaries ihk
 
 clean:

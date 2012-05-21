@@ -16,4 +16,10 @@ In der ihk.tex befinden sich das Deckblatt sowie die Verlinkungen auf die
 eigentichen Kapitel.
 
  == Erstellen des Dokumentes ==
+Latex muß mehrere male laufen darum:
+
+make
+make glossar
+make
+make
 
