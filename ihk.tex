@@ -1,10 +1,39 @@
-\documentclass[pdftex,10pt,a4paper,appendixprefix,liststotoc]{scrreprt}
+\documentclass[pdftex,10pt,a4paper,appendixprefix,listof=numbered,bibliography=totocnumbered]{scrreprt}
+%\documentclass[pdftex,10pt,a4paper,appendixprefix,liststotocnumbered,bibtotocnumbered]{scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
-\usepackage{geometry} 
-\geometry{a4paper, left=2.5cm, right=2cm, top=3cm, bottom=3cm} 
-\setlength{\footskip}{2cm} 
+\usepackage{translator}  
+\usepackage{scrpage2}
+\usepackage{tikz}
+\usepackage{gantt}
+\usepackage[right]{eurosym}
+\usepackage{tabularx}
+\usepackage[section]{placeins}
+\usepackage{hyperref}                        
+%Wenn xindy installiert ist dann xindy nuzen für Glossar:
+%\usepackage[xindy, toc, acronym]{glossaries}
+\usepackage[toc, numberedsection=autolabel]{glossaries}
+%\usepackage[nottoc,numbib]{tocbibind}
+
+\hypersetup{                                                                        
+	colorlinks=true,                                                                 
+	linkcolor=black,                                                                  
+	pdftitle={Titiel},                                     
+	pdfauthor={Autor},                                                    
+	pdfsubject={Subjekt}                                    
+}
+
+\renewcommand*{\glossaryname}{Glossary}
+\deftranslation{Glossary}{Abk\"urzungen}
+
+%Ränder anders setzten falls zu groß:
+%\usepackage{geometry}
+%\geometry{a4paper, left=2.5cm, right=2cm, top=3cm, bottom=3cm}
+%\setlength{\footskip}{2cm} 
+
+\makeglossaries
+\include{glossar}
 
 \begin{document}
 
@@ -12,15 +41,16 @@
 \begin{titlepage}
  \begin{center}
 	\huge
-	\textbf{Projekt Name} %Change the name of the project
+	\textbf{Titel hier} %Change the name of the project
 	\bigskip\\
 	\large
-	Vorname Nachname \\   %Enter your name here
-	Fachinformatik\\
+	\textbf{Auszubildender: Markus Mustermann}\\   %Enter your name here
+	Ident-Nr: \\
+	Ausbildungsberuf: \\
 	Fachrichtung: Anwendungsentwicklung %Chose this or unkomment line below
    %Fachrichtung: Systemintegration 
 	\bigskip\\
-   \textbf{Firmenname} %Enter company name here
+   \textbf{Ausbildungsbetrieb: } %Enter company name here
 	\bigskip\\
 	\today
 \end{center}
@@ -34,35 +64,35 @@
 %Enter your text below the chapter or section keywords
 
 %=== Chapter 1
-\chapter{Ausgangssituation}
-
-\section{Projektziele, Teilaufg.,Kundenw\"unsche }
-
-\section{Projektumfeld, Prozessschittstellen}
-
+\include{chapter1}
 %=== Chapter 2
-\chapter{Ressourcen- und Ablauf-planung}
-
-\section{Personal-, Sach-, mittel-, Termin- und Kostenplanung}
-
-\section{Ablaufplan}
-
+\include{chapter2}
 %=== Chapter 3
-\chapter{Durchführung und Auftrags-bearbeitung}
-
-\section{Prozessschritte, Vorgehensweise, Qualit\"atssicherung}
-
-\section{Abweichungen, Anpasssungen, Entscheidungen}
-
+\include{chapter3}
 %=== Chapter 4
-\chapter{Projektergebnisse}
-
-\section{Soll-Ist-Vergl., Abw.U. Anpassungen, Qualit\"atssicherung}
+\include{chapter4}
 
 \newpage
-\pagenumbering{Roman}
+%\pagenumbering{Roman}
+\addpart{Anhang}
 \appendix
+	\newpage
+	\include{userdoc}
+	\newpage
+	\include{test}
+	\newpage
+
+	\printglossary
+	%\printglossary[type=acronym,
+	%			   title=Abk\"urzungsverzeichnis,
+	%			   toctitle=Abk\"urzungsverzeichnis]
+	\newpage
 	\listoftables
 	\listoffigures
+	\newpage
+	\include{bib}
+	\newpage
+	\include{erklaerung}
+	
 %\end{appendix}
 \end{document}

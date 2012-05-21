@@ -1,6 +1,9 @@
 all:
 	pdflatex ihk.tex
 
+glossarie:
+	makeglossaries ihk
+
 clean:
 	 rm ihk.aux 
 	 rm ihk.lof 

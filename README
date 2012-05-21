@@ -4,3 +4,16 @@
 Hier ist ein LaTeX template für die Documentation von Ausbildungs-Projekten
 der IHK Karlsruhe.
 
+ == Datei Organisation ==
+ Jedes Kapitel wurde der Übersichtlichkeit halber in eine Eigene datei geschrieben. 
+Die Dateien: userdoc.tex, bib.tex, glossar.tex und test.tex gehören zum Apendix. 
+* userdoc: Benutzerhandbuch
+* bib.tex: Bibliographie
+* glossar.tex: Das Glossar
+* test.tex: Test-Protokoll
+
+In der ihk.tex befinden sich das Deckblatt sowie die Verlinkungen auf die 
+eigentichen Kapitel.
+
+ == Erstellen des Dokumentes ==
+
