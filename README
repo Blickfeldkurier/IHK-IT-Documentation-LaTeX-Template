@@ -15,6 +15,10 @@ Die Dateien: userdoc.tex, bib.tex, glossar.tex und test.tex gehören zum Apendix
 In der ihk.tex befinden sich das Deckblatt sowie die Verlinkungen auf die 
 eigentichen Kapitel.
 
+ == Das data Verzeichnis ==
+ Hier liegen alle Bilder des Dokumentes. Alle Dateien die beim Checkaut 
+ vorliegen sind Platzhalter.
+
  == Erstellen des Dokumentes ==
 Latex muß mehrere male laufen darum:
 
