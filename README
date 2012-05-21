@@ -1,5 +1,8 @@
 = IHK IT Documentation LaTeX Template =
 
+Diese Dateien dienen als Startpunkt zum erstellen einer IHK Ausbildungsdokumentation
+für Fachformatiker. Keine Gewehr. Als Vorlage dienten die Hinweis-Formulare der IHK Karlsruhe.
+
 == Einsatzweck ==
 Hier ist ein LaTeX template für die Documentation von Ausbildungs-Projekten
 der IHK Karlsruhe.
